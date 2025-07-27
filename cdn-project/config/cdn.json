@@ -1,0 +1,60 @@
+{
+  "meta_server": {
+    "ip": "127.0.0.1",
+    "port": 8080,
+    "database_path": "./data/meta.db"
+  },
+  "origin_server": {
+    "ip": "127.0.0.1",
+    "port": 8081,
+    "meta_server_url": "http://127.0.0.1:8080"
+  },
+  "fss": {
+    "ip": "127.0.0.1",
+    "port": 8082,
+    "storage_path": "./data/fss_storage"
+  },
+  "cdn_nodes": [
+    {
+      "node_id": "cdn_node_1",
+      "ip": "127.0.0.1",
+      "port": 8083,
+      "latitude": 40.7128,
+      "longitude": -74.0060,
+      "cache_capacity": 1073741824,
+      "cache_directory": "./data/cache_node_1"
+    },
+    {
+      "node_id": "cdn_node_2", 
+      "ip": "127.0.0.1",
+      "port": 8084,
+      "latitude": 34.0522,
+      "longitude": -118.2437,
+      "cache_capacity": 1073741824,
+      "cache_directory": "./data/cache_node_2"
+    },
+    {
+      "node_id": "cdn_node_3",
+      "ip": "127.0.0.1", 
+      "port": 8085,
+      "latitude": 51.5074,
+      "longitude": -0.1278,
+      "cache_capacity": 1073741824,
+      "cache_directory": "./data/cache_node_3"
+    }
+  ],
+  "cache": {
+    "ttl_seconds": 3600,
+    "cleanup_interval_seconds": 300,
+    "prefetch_enabled": true,
+    "prefetch_batch_size": 10
+  },
+  "heartbeat": {
+    "interval_seconds": 30,
+    "timeout_seconds": 90
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "./logs/cdn.log"
+  }
+}
